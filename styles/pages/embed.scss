@@ -1,0 +1,16 @@
+.embed{
+    .mini-header{
+        &__texts{
+            padding: 0 0 4rem 9rem;
+        }
+    }
+}
+@media screen and (max-width:1200px) {
+    .embed{
+        .mini-header{
+            &__texts{
+                padding: 0 2.4rem;
+            }
+        }
+    }
+}

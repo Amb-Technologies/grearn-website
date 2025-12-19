@@ -1,0 +1,86 @@
+.toolkit{
+    background-color: #f4f8fc;
+    padding:12rem 9rem;
+    height: max-content;
+    .center{
+        p{
+            width: 65%;
+            margin: auto;
+        }
+    }
+    &__info{
+        padding: 10rem 0 0 ;
+       
+        .tools{
+            padding: 0 14rem 0 2rem;
+            width: 100%;
+            &__card{
+                padding: 0 0 4rem;
+                &:nth-child(2){              
+                    border-top: 0.5px solid rgba(8,37,82,.15);
+                    padding: 3.2rem 0;
+                    margin-bottom: 3.2rem;
+                }
+                .arrowed-link{
+                    color: $color-primary-blue;
+                    padding: 1.5rem 0;
+                }
+            }
+        }
+        &__image{
+            width: 100%;
+            img{
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+@media screen and (max-width:1300px) {
+    .toolkit{
+        padding: 10rem 2.4rem;
+        &__info{
+            .tools{
+                padding: 0 8rem 0 2rem;
+            }
+        }
+    }
+}
+@media screen and (max-width:1030px) {
+    .toolkit{
+        .center{
+            p{
+                width:100%;
+            }
+        }
+        &__info{
+            &.grid-two{
+                grid-template-columns: 1fr;
+            }
+            &__image{
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width:800px) {
+    .toolkit{
+        padding: 6rem 2.4rem;
+        &__info{
+            padding: 5rem 0;
+            .tools{
+                padding: 4rem 0 0;
+                &__card{
+                    padding: 0 1.2rem 0;
+                    &:nth-child(2){
+                        padding: 3rem 0 0 1.2rem;
+                    }
+                }
+            }
+            &__image{
+                display: block;
+                grid-row: 1;
+            }
+        }
+    }
+}

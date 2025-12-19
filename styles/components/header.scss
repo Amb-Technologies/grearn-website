@@ -1,0 +1,336 @@
+.header{
+    margin-top: 1rem;
+    overflow-x: hidden;
+    .mobileheader{
+        display: none;
+    }
+    &__section{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        align-items: center;
+        padding: 0 3vw;
+        &__personas{
+            position: relative;
+            padding-bottom: 4rem;
+            .background{
+                height: 100%;
+                position: absolute;
+                width: 26.5vw;
+                z-index: 0;
+                opacity: 0.5;
+                &.blue{
+                    background-color: rgb(223, 250, 255);
+                }
+                &.green{
+                    background-color: rgb(231, 255, 231);
+                }
+                &.pink{
+                    background-color: rgb(255, 236, 219);
+                }
+            }
+            &__image{
+                position: relative;
+                padding: 6rem 16% 0 4.7vw;
+                z-index: 3;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                .play__section{
+                    position: absolute;
+                    top: 7rem;
+                    right: 19%;
+                    z-index: 6;
+                    svg{
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                }
+                .imageCard{
+                min-height: 85vh;
+                    img{
+                        z-index: 5;
+                        object-fit: cover;
+                        height: 85vh;
+                        width: 100%;
+                    }
+                }
+                
+                div{
+                    z-index: 5;
+                    .video{
+                        height: 85vh;
+                        max-height: 85vh;
+                        width: 100%;
+                        object-fit: cover;
+                        overflow: hidden;
+                        video{
+                            height: 100%;
+                            width: 100%;
+                            transform: scale(1.5);
+                            margin-top: -10rem;
+                        }
+                    }   
+                }
+                 
+            }
+            &__description{
+                width: 47%;
+                position: absolute;
+                z-index: 4;
+                right: 3rem;
+                background-color: white;
+                padding: 2.4rem;
+                height: auto;
+                bottom: -2.4rem;
+                .texts{
+                    color: $color-neutral;
+                    letter-spacing: .2px;
+                    line-height: 1.84rem;
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    font-family: Light;
+                }
+                .persona_info{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 3rem;
+                    .name{
+                        color: $color-deep-blue;
+                        font-size: 1.4rem;
+                    }
+                    .handle{
+                        color: $color-primary-blue;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+        &__info{
+            width: 100%;
+            padding-left: 6%;
+            &__bighead{
+            margin-top: -10rem;
+            }
+            &__text{
+                font-size: 4.8rem;
+                color: $color-deep-blue;
+                font-weight: 700;
+                font-family: Light;
+                margin-top: 2rem;
+                letter-spacing: -1px;
+            }
+            &__form{
+                height: 100%;
+                form{
+                display: flex;
+                height: 100%;
+                padding-top: 4.5rem;
+                width: 100%;
+                    input{
+                        height: auto;
+                        width: 50%;
+                        margin-right: 1rem;
+                        padding-left: 1.2rem;
+                        border: 1px solid #ddd;
+                        outline: none;
+                        border-radius: .8rem;
+                        &:focus{
+                            border:1px solid $color-primary-blue;
+                            outline: $color-primary-blue;
+                        }
+                    }
+            }
+               
+            }
+        }
+    }
+    .select_info{
+        display: flex;
+        width: fit-content;
+        z-index: 5;
+        position: relative;
+        margin-left: 4.7vw;
+        margin-top: 3rem;
+        div{
+            margin-right: 1rem; 
+            height: 4.5rem;
+            display: flex;
+            overflow: hidden;
+            img{
+                width: 5.5rem;
+                height: 5.5rem;
+                object-fit: cover;
+                &.darken{
+                    filter: grayscale(100%) contrast(1.2);
+                }
+                &:hover{
+                    filter:grayscale(100%) contrast(1.7) blur(.5px);
+                    cursor: pointer;
+                    transition: all 300ms ease-in-out;
+                }
+                &.lighten{
+                    filter: grayscale(0) contrast(1);
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .header{
+        &__section{
+            padding: 0;
+            &__personas{
+                &__image{
+                    padding: 6rem 5% 1rem 2vw;
+                    }
+            }
+            &__info{
+                padding-left: 2%;
+                &__head{
+                    font-size: 7rem;
+                    margin-top: -3.5rem;
+                }
+                &__text{
+                    font-size: 3.2rem;
+                    margin-top: 1.6rem;
+                }
+                &__form{
+                    padding-top: 3.8rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:940px) {
+    .header{
+        margin-top: 0;
+        &__section{
+            grid-template-columns: 1fr;
+            &__personas{
+                order: 1;
+            padding-bottom: 7rem;
+                .background{
+                    width: 70vw;
+                }
+                &__image{
+                    padding:2rem 4rem;
+                    .play__section{
+                        top: 4rem;
+                        right: 6rem;
+                    }
+                }
+                &__description{
+                    width: 50%;
+                    left: 4rem;
+                    bottom: 0;
+                }
+            }
+            &__info{
+                padding: 0rem 3.4rem;
+                &__head{
+                    margin-top: 0;
+                    line-height: 9rem;
+                }
+                &__form{
+                    form{
+                        padding-top: 0;
+                    }
+                }
+            }
+        }
+        .select_info{
+            margin-top: 2rem;
+        }
+    }
+}
+@media screen and (max-width: 550px) {
+    .header{
+        .desktopheader{
+            display: none;
+        }
+        .mobileheader{
+            display: flex;
+            height: auto;
+            width: 100%;
+            margin-top: 2.4rem;
+            div{
+                object-fit: cover;
+                width: 15rem;
+                height: 5rem;
+                svg{
+                    width: 14rem;
+                    height: 4.5rem;
+                }
+            }
+            .appstore{
+                margin-top: .4rem;
+                margin-left: .2rem;
+                svg{
+                    border-radius: 6px;
+                }
+            }
+        }
+        &__section{
+            &__info{
+                padding: 2rem 2.1rem .7rem;
+                &__head{
+                    font-size: 4.6rem;
+                    line-height: 6rem;
+                    font-weight: 700;
+                    font-family: medium;
+                    letter-spacing: -2px;
+                }
+                &__text{
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                }
+            }
+            &__personas{
+                padding-bottom: 4rem;
+                &__image{
+                    .imageCard{
+                        min-height: 58vh;
+                        overflow:hidden;
+                        .overlay{
+                            position: absolute;
+                            left: -20vw;
+                            width: 0;
+                            height: 100%;
+                            background-color: white;
+                        }
+                        img{
+                             height: 58vh;
+                        }
+                    }   
+                    div{ 
+                        .video{
+                            height: 58vh;
+                            max-height: 58vh;
+                        }
+                    }
+                    padding: 2.1rem 1.8rem;
+                    .play__section{
+                        right: 4rem;
+                    }
+                }
+                &__description{
+                    width: 75%;
+                    padding: 1.4rem 1.6rem;
+                    left: 1.8rem;
+                    bottom: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .select_info{
+            div{
+                height: 4rem;
+                img{
+                    width: 5rem;
+                    height: 5rem;
+                }
+            }
+        }
+    }
+}

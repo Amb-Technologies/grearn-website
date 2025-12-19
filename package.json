@@ -1,0 +1,33 @@
+{
+  "name": "cowry",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@prisma/client": "^7.2.0",
+    "babel-plugin-inline-react-svg": "^2.0.2",
+    "chart.js": "^2.9.4",
+    "eslint": "8.35.0",
+    "eslint-config-next": "13.2.3",
+    "gsap": "^3.11.4",
+    "next": "^13.2.3",
+    "next-react-svg": "^1.2.0",
+    "next-videos": "^1.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-svg": "^16.1.5",
+    "sass": "^1.58.3",
+    "sass-loader": "^13.2.0"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^6.5.1",
+    "babel-preset-env": "^1.7.0",
+    "prisma": "^7.2.0",
+    "react-svg-loader": "^3.0.3"
+  }
+}

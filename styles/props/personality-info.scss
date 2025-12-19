@@ -1,0 +1,75 @@
+.personality-info{
+    height:auto;
+    .persona-image{
+        width: 100%;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            scale: 1.1;
+        }
+    }
+    .persona{
+        width: 100%;
+        padding: 6rem 22% 2rem 8%;
+        h4{
+            line-height: 1.6;
+        }
+        p{
+            padding: 1rem 0 4rem;
+            font-weight: 700;
+            font-family: Bold;
+            font-size: 1.7rem;
+            letter-spacing: -.1px;
+            span{
+                font-size: 1.2rem;
+                color: rgba(8,37,82,.5);
+                font-family: Medium;
+                font-family: 200;
+            }
+        }
+    }
+}
+@media screen and (max-width:1200px) {
+    .personality-info{
+        .persona{
+            padding: 4rem 2.8rem;
+            h4{
+                font-size: 2.4rem;
+            }
+        }
+    }
+}
+@media screen and (max-width:750px) {
+    .personality-info{
+        height: auto;
+        &.grid-two{
+            grid-template-columns: 1fr;
+        }
+        .persona-image{
+            max-height: 50rem;
+            img{
+                scale: 1;
+                height: auto;
+            }
+        }
+        .persona{
+            h4{
+                font-size: 2.23rem;
+            }
+        }
+    }
+}
+@media screen and (max-width:600px) {
+    .personality-info{
+        .persona-image{
+            max-height: 34rem;
+            img{
+                scale: 1;
+                height: auto;
+            }
+        }
+    }
+}

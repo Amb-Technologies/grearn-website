@@ -1,0 +1,210 @@
+@font-face {
+    font-family:"Light" ;
+    src: url("../fonts/BR\ Firma\ Light.otf");
+  }
+  @font-face {
+    font-family:"Bold" ;
+    src: url("../fonts/BR\ Firma\ Bold.otf");
+  }
+  @font-face {
+    font-family:"Medium" ;
+    src: url("../fonts/BR\ Firma\ Medium.otf");
+  }
+  @font-face {
+    font-family:"Regular" ;
+    src: url("../fonts/BR\ Firma\ Regular.otf");
+  }
+  
+  @import "./styles/variables.scss";
+  
+  *{margin: 0; padding: 0; box-sizing: border-box;}
+  html{
+    font-size: 62.5%;
+  }
+  body{
+    font-family: Medium;
+  
+  }
+  h1, h2, h3, h4, h5{
+    line-height: 1.25;
+    margin-bottom: 0.7em;
+    font-weight: 900;
+    color: $color-deep-blue;
+  }
+  h1{
+    font-size: 5.46rem;
+    letter-spacing: -2px;
+    font-family: Bold;
+  }
+  h2{
+    font-size: 4.86rem;
+    letter-spacing: -1px;
+  }
+  h3{
+    font-size: 3.9rem;
+    letter-spacing: -1px;
+    font-family: Bold;
+  }
+  h4{
+    font-size: 3.45rem;
+    letter-spacing: -.8px;
+  }
+  h5{
+    font-size: 3rem;
+    letter-spacing: -.5px;
+  }
+  p{
+    line-height: 1.7;
+    margin: 1.5rem 0;
+    font-family: Regular;
+    font-weight: 200;
+    font-size: 1.8rem;
+    letter-spacing: -.2px;
+    color: $color-deep-blue;
+}
+  input{
+    outline: none;
+    border: 0;
+    background-color: transparent;
+    &::placeholder{
+      font-size: inherit;
+    }
+  }
+  .btn{
+    font-size: 1.44rem;
+    background-color: $color-primary-blue;
+    padding: .3rem 2.2rem;
+    letter-spacing: .6px;
+    line-height: 4rem;
+    color: #fff;
+    width: fit-content;
+    height: min-content;
+    max-height: min-content;
+    cursor: pointer;
+    font-weight: 900;
+    border-radius: .5rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-shadow: 0 4px 6px 1px #0066f52e;
+    border: none;
+    transition: all 400ms ease-in-out;
+    font-family: Light;
+  }
+  .btn:hover{
+    box-shadow: 4px 8px 8px 2px #0066f52e;
+  
+  }
+  .bighead{
+    font-size: 9.6rem;
+    line-height: 11rem;
+    color: $color-deep-blue;
+    font-weight: 700;
+    letter-spacing: -5.4px;
+    margin-top: -10rem;
+  }
+  .grid-two{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    &.aligncenter{
+      align-items: center;
+    }
+  }
+  .center{
+    text-align: center;
+  }
+  .link, a{
+    text-decoration: none;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+  }
+  .arrowed-link{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.4rem;
+    span{
+        margin-left: 3px;
+        transition: all 300ms ease-in-out;
+        opacity: 1;
+        svg{
+            margin-bottom: -0.2rem;
+            height: 1.2rem;
+            object-fit: contain;
+        }
+    }
+    &:hover{
+        span{
+            margin-left: .7rem;
+        }
+    }
+  }
+
+  @media screen and (max-width: 940px){
+    .bighead{
+      margin-top: 0;
+    }
+  }
+  @media screen and (max-width:750px) {
+    h1{
+      font-size: 3.9rem;
+    }
+    h2 {
+      font-size: 3.3rem;
+    }
+    h3{
+      font-size: 3rem;
+    }
+    h5{
+      font-size: 2.6rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+  }
+  @media screen and (max-width:600px) {
+
+    }
+  /* 404 style*/
+  @import "./styles/404.scss";
+
+  /*props styles*/
+  @import "./props/mini-header.scss";
+  @import "./props/faq.scss";
+  @import "./props/personality-info.scss";
+  
+  /*Components styles*/
+  @import "./styles/components/navbar.scss";
+  @import "./styles/components/header.scss";
+  @import "./styles/components/richstep.scss";
+  @import "./styles/components/invest.scss";
+  @import "./styles/components/appinfo.scss";
+  @import "./styles/components/security.scss";
+  @import "./styles/components/reviews.scss";
+  @import "./styles/components/reason.scss";
+  @import "./styles/components/signup.scss";
+  @import "./styles/components/footer.scss";
+  @import "./styles/components/toolkit.scss";
+  @import "./styles/components/savingkit.scss";
+  @import "./styles/components/save-goals.scss";
+  @import "./styles/components/stash-invest.scss";
+  @import "./styles/components/stash-faces.scss";
+
+  
+  /*Pages styles*/
+  @import "./styles/pages/save.scss";
+  @import "./styles/pages/invest.scss";
+  @import "./styles/pages/stash.scss";
+  @import "./styles/pages/plan.scss";
+  @import "./styles/pages/embed.scss";
+

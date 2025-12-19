@@ -1,0 +1,76 @@
+.faq{
+    width: 100%;
+    height: auto;
+    background: white;
+    border-bottom: 0.5px solid rgba(8,37,82,.05);
+    padding:2.4rem 2rem;
+    padding: 1.6rem;
+    cursor: pointer;
+    &__heading{
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h4{
+            font-size: 2.5rem;
+            letter-spacing: 0;
+            margin-right:4rem;
+            margin-bottom: 0;
+            padding: 1rem 0;
+            color: $color-primary-blue;
+            font-family: Bold;
+        }
+        .sign{
+            width: 2.2rem;
+            height: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span{
+                display: block;
+                width: 2.2rem;
+                height: 1.3px;
+                background-color: black ;
+                &:nth-child(2){
+                    transform: rotate(90deg);
+                    position: absolute;
+                }
+            }
+            &.plus{
+                span{
+                    &:nth-child(2){
+                        opacity: 0;
+                        transition: opacity .5s ease;
+                    }
+                }
+            }
+            &.minus{
+                span{
+                    &:nth-child(2){
+                        opacity: 1;
+                        transition: opacity .5s ease;
+                    }
+                }
+            }
+        }
+
+    }
+    &__body{
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height .55s ease;
+        &.showfaq{
+        max-height: 60rem;
+        }
+    }
+}
+@media screen and (max-width:800px) {
+    .faq{
+        &__heading{
+            h4{
+                font-size: 2.3rem;
+                letter-spacing: -.1px;
+            }
+        }
+    }
+}

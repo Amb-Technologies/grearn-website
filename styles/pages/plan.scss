@@ -1,0 +1,49 @@
+.plan{
+    .planning-tools{
+        background-color: $light-bg;
+        padding: 12rem 9rem;
+        min-height: 100rem;
+        &__info{
+            margin-right: 10%;
+            background-image:url(/assets/plan/device-c.png);
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: contain;
+            height: 100%;
+        }
+        .faq-section{
+            .faq{
+                background: #fff;
+                box-shadow: 0 26px 30px -14px rgba(0,102,245,.08);
+                border-radius: 1.2rem;
+                margin-bottom: 4rem;
+                padding:  4rem;
+            }
+        }
+    }
+}
+@media screen and (max-width:1250px) {
+    .plan{
+        .planning-tools{
+            padding: 9rem 2.4rem;
+        }
+    }
+}
+@media screen and (max-width:1000px) {
+    .plan{
+        .planning-tools{
+            &.grid-two{
+                grid-template-columns: 1fr;
+            }
+            &__info{
+                margin-right: 0;
+                background-image: none;
+            }
+            .faq-section{
+                .faq{
+                    padding:  3rem;
+                }
+            }
+        }
+    }
+}

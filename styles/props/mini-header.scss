@@ -1,0 +1,132 @@
+.mini-header{
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 0;
+    &__texts{
+        width: 100%;
+        padding:0 9rem;
+        color: $color-deep-blue;
+        position: relative;
+        z-index: 2;
+        h1{
+            letter-spacing: -1.9px;
+            line-height: 1.25;
+            margin-bottom: 0.7em;
+            font-weight: 900;
+            font-family: Bold;
+        }   
+        p{
+            max-width: 80%;
+            &.small-text{
+                background-color: #5ac8fa;
+                color: #fff;
+                width: fit-content;
+                padding: .1rem .6rem;
+                font-size: 1.6rem;
+                border-radius: 2px;
+                font-weight: 900;
+                font-family: Bold;
+            }
+        }
+        .btn{
+            margin-top: 2.4rem;
+        }
+    }
+  &__image{
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    height: 84rem;
+    .headerimg{
+        height: 80rem;
+        svg{
+            position: absolute;
+            overflow: hidden;
+            right: 0;
+            bottom: 0;
+            height: 80rem;
+            object-fit: cover;
+            margin-right: -26%;
+         }
+    }
+    
+  }
+}
+@media screen and (max-width:1300px) {
+    .mini-header{
+        &__texts{
+            padding: 0 2.4rem;
+        }
+        &__image{
+            height:60rem;
+            .headerimg{
+                height:57rem;
+                svg{
+                    width: 100%;
+                    height:57rem;
+                 }
+            }
+            
+         }
+    }
+}
+@media screen and (max-width:900px) {
+    .mini-header{
+        &.grid-two{
+            grid-template-columns: 2fr 1fr;
+            width:100%;
+        }
+        &__image{
+             svg{
+                width: 100%;
+             }
+          }
+    }
+}
+@media screen and (max-width:750px) {
+    .mini-header{
+        padding-top: 4rem;
+        &.grid-two{
+            grid-template-columns: 1fr;
+        }
+        &__texts{
+            h1{
+                font-size: 3.85rem;
+            }
+        }
+    }
+}
+@media screen and (max-width:600px) {
+    .mini-header{
+        min-height: 100%;
+        &__texts{
+            p{
+                max-width: 100%;
+            }
+        }
+        &__image{
+            overflow: hidden;
+            height: 100%;
+            .headerimg{
+                height: auto;
+                svg{
+                    position: static;
+                    margin-top: 8rem;
+                    margin-right: 0;
+                    margin-left: -25vw;
+                    margin-bottom: -15rem;
+                    overflow: hidden;
+                    width:78rem;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+           
+        }
+    }
+}

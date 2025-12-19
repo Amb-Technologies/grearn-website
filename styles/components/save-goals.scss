@@ -1,0 +1,89 @@
+.save-goals{
+    padding: 8rem;
+    &__img{
+        img{
+            max-height: 68vh;
+            object-fit: contain;
+            width: 100%;
+        }
+    }
+    &__info{
+        .floatingimg{
+            height: 40rem;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            .animated{
+                background: url(/assets/save/plan-as-save.png);
+                background-repeat: repeat;
+                height: 50000%;
+                width: 100%;
+                background-position: bottom;
+                background-size: 100% auto;
+                z-index: 1;
+                position: absolute;
+                top: 3rem;
+                -webkit-animation: imganimation 7000s linear infinite;
+                animation: imganimation 7000s linear infinite;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                height: 40%;
+                width: 100%;
+                left: 0;
+                z-index: 2;
+                background-image: linear-gradient(0deg,hsla(0,0%,100%,0),#fff);
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                height: 40%;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+                z-index: 2;
+                background-image: linear-gradient(-180deg,hsla(0,0%,100%,0),#fff);
+            }
+        }
+    }
+}
+@keyframes imganimation{
+    0%{
+        background-position: bottom;
+    }
+    100%{
+        background-position: top;
+    }
+}
+@media screen and (max-width:1300px){
+    .save-goals{
+        padding: 8rem 2.4rem;
+    }
+}
+@media screen and (max-width:1000px){
+    .save-goals{
+        &__img{
+            max-height: 60vh;
+            padding-right: 6rem;
+        }
+    }
+}
+@media screen and (max-width:750px){
+    .save-goals{
+        &.grid-two{
+            grid-template-columns: 1fr;
+        }
+        &__img{
+            max-height: auto;
+            width:100%;
+            padding:0 4rem 4rem;
+        }
+        &__info{
+            .floatingimg{
+                padding: 0 2.4rem;
+            }
+        }
+    }
+}

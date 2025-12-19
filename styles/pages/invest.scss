@@ -1,0 +1,73 @@
+.mutual-funds{
+    .mini-header{
+        &__texts{
+            padding: 0 0 4rem 9rem;
+        }
+        &__image{
+            .headerimg{
+                svg{
+                    margin-right: -10%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1250px) {
+    .mutual-funds{
+        .mini-header{
+            &__texts{
+                padding: 0 2.4rem;
+            }
+        }
+    }
+}
+@media screen and (max-width:750px){
+    .mutual-funds{
+        .mini-header{
+            &__image{
+                .headerimg{
+                    margin-top: -12rem;
+                    height: auto;
+                    svg{
+                        position: static;
+                        margin-bottom: 0;
+                        margin-left: -20vw;
+                        height: 60rem;
+                        object-fit: fill;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+@media screen and (max-width:600px) {
+    .mutual-funds{
+        .mini-header{
+            padding-top: 5rem;
+            &__texts{
+                h1{
+                    font-size: 3.7rem;
+                }
+                p{
+                    max-width: 100%;
+                    font-size: 1.6rem;
+                    letter-spacing: -.1px;
+                }
+            }
+            &__image{
+                .headerimg{
+                    margin-top: -12rem;
+                    svg{
+                        margin-bottom: 0;
+                        margin-left: -40vw;
+                        height: 40rem;
+                        object-fit: fill;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+    

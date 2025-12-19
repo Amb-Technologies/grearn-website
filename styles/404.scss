@@ -1,0 +1,32 @@
+.error-page{
+        /*background-image: url(/assets/errorpage-bg.svg);
+        background-repeat: no-repeat;
+        background-size: cover;*/
+    &__container{
+        min-height: 80vh;
+        display: grid;
+        place-items: center;
+    }
+    .center{
+        width: 50%; 
+        p{
+            padding: 2rem 0;
+        }
+        .btn{
+            margin-top: 5rem;
+        }
+    }
+}
+@media screen and (max-width:900px) {
+    .error-page{
+        /*background-position:right;
+        background-position-y:top ;*/
+        &__container{
+            
+            .center{
+                width: 100%;
+                padding: 0 4rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,157 @@
+.appinfo{
+    background-image: url(/assets/app-background.svg);
+    background-repeat: no-repeat;
+    background-color: #fcfcfc;
+    background-position: -120% -120px;
+    background-size: 77%;
+    padding-bottom: 120px;
+    padding:8rem 0 8rem 1rem;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: auto;
+    &__screenshot{
+        width: 100%;
+        img{
+            width: 100%;
+            object-fit: contain;
+            max-height: 100vh;
+        }
+    }
+    &__description{
+        width: 100%;
+        padding:0 15%;
+        height: fit-content;
+        &__head{
+            letter-spacing: -1px;
+            line-height: 1.25;
+            margin-bottom: 0.7em;
+            font-weight: 700;
+            font-size: 4.86rem;
+            color: $color-deep-blue;
+            margin-bottom: 6.5rem;
+        }
+        &__steps{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-right: 5vw;
+            .appinfo-step{
+                display: flex;
+                height: 100%;
+                width: 100%;
+                margin-left: -2rem;
+                .stepcount{
+                    display: flex;
+                    flex-direction: column;
+                    height: auto;
+                    align-items: center;
+                    padding-right: 2rem;
+                    
+                    &__number{
+                        width: 7rem;
+                        height: 7rem;
+                        margin-right: 1.5rem;
+                        display: grid;
+                        place-items: center;
+                        .stepnum1, .stepnum2, .stepnum3{
+                        width: 7rem;
+                        height: 7rem !important;
+                        display: grid;
+                        place-items: center;
+                        font-size: 1.8rem;
+                        color: $color-primary-blue;
+                        text-rendering: geometricPrecision;
+                        border-radius: 50%;                      
+                        font-weight: 900;
+                        }
+                    }
+                    &__countline{
+                        margin-right: 1.5rem;
+                        width: .8px;
+                        height: 100%;
+                        display: grid;
+                        place-items: center;
+                        background-color: $color-primary-blue;
+                    }
+                }
+                .stepinfo{
+                    &__head{
+                        font-size: 2.3rem;
+                        line-height: 1;
+                        letter-spacing: -.2px;
+                        font-weight: 600;
+                        color: $color-deep-blue;
+                        padding-top: 2.5rem;
+                    }
+                    &__details{
+                        line-height: 1.7;
+                        padding: 1.5rem 0;
+                        font-weight: 600;
+                        font-size: 1.7rem;
+                        color: rgba(8, 37, 82, 0.8);
+                        font-family: Light;
+                        margin-bottom: 3.3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1050px){
+    .appinfo{
+        padding: 7rem 0 7rem 0;
+        margin-top: 3rem;
+        &__description{
+            padding: 0 3rem;
+            &__head{
+                font-size: 3.8rem;
+            }
+            &__steps{
+                margin-right: 2rem;
+                .appinfo-step{
+                    .stepinfo{
+                        &__head{
+                            font-size: 2rem;
+                        }
+                        &__details{
+                            font-size: 1.45rem;
+                            margin-bottom: 2.8rem;
+                        }
+                    }
+                }   
+            }
+        }
+    }
+}
+@media screen and (max-width: 750px) {
+    .appinfo{
+        grid-template-columns: 1fr;
+        .signup{
+            width: 100%;
+            display: grid;
+            place-items: center;
+            padding-top: 2rem;
+        }
+        &__screenshot{
+           img{
+            max-height: 70vh;
+           }
+        }
+        &__description{
+            padding: 6rem 2.4rem 0;
+            &__head{
+                font-size: 3.2rem;
+                margin-bottom: 4rem;
+            }
+            &__steps{
+                .appinfo-step{
+                    .stepcount{
+                        padding-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
