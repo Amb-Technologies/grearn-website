@@ -5,7 +5,7 @@ import NairaPlan from "../public/assets/plan/naira-plan.svg";
 import Plansections from "../Sections/Plansections.js";
 import Footer from "../Sections/Footer.js";
 
-const plan = () => {
+const Plan = () => {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
