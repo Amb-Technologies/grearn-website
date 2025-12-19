@@ -1,7 +1,7 @@
 import Navbar from "../Components/Navbar.js";
 import MiniHeader from "../props/miniHeader.js";
 import Footer from "../Sections/Footer.js";
-// import Embedsvg from "../public/assets/embed/embednaira.svg";
+import Embedsvg from "../public/assets/embed/embednaira.svg";
 
 const Embed = () => {
   return (
