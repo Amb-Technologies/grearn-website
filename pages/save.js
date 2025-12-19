@@ -1,6 +1,6 @@
 import MiniHeader from "../props/miniHeader";
 import Navbar from "../Components/Navbar.js";
-// import NairaSave from "../public/assets/save/naira-save.svg";
+import NairaSave from "../public/assets/save/naira-save.svg";
 import Savesections from "../Sections/Savesections.js";
 import Footer from "../Sections/Footer.js";
 
