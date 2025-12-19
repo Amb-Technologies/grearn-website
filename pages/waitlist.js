@@ -5,7 +5,7 @@ import NairaPlan from "../public/assets/plan/naira-plan.svg";
 import Plansections from "../Sections/Plansections.js";
 import Footer from "../Sections/Footer.js";
 
-const Plan = () => {
+const Waitlist = () => {   // ✅ Renamed component to match React conventions
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -19,22 +19,28 @@ const Plan = () => {
 
     setLoading(true);
 
-    const res = await fetch("/api/waitlist", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ fullname, email, phone }),
-    });
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ fullname, email, phone }),
+      });
 
-    const data = await res.json();
-    setLoading(false);
+      const data = await res.json();
+      setLoading(false);
 
-    if (res.status === 200) {
-      alert("🎉 You have been added to the waitlist!");
-      setFullname("");
-      setEmail("");
-      setPhone("");
-    } else {
-      alert(data.message);
+      if (res.status === 200) {
+        alert("🎉 You have been added to the waitlist!");
+        setFullname("");
+        setEmail("");
+        setPhone("");
+      } else {
+        alert(data.message || "Something went wrong.");
+      }
+    } catch (err) {
+      setLoading(false);
+      alert("Network error. Please try again.");
+      console.error(err);
     }
   };
 
@@ -81,7 +87,6 @@ const Plan = () => {
       <Plansections />
       <Footer />
 
-      {/* 👇 Embedded CSS */}
       <style jsx>{`
         .plan {
           background-color: #cdf2fc;
@@ -162,4 +167,4 @@ const Plan = () => {
   );
 };
 
-export default plan;
+export default Waitlist; // ✅ Fixed export to match component name
